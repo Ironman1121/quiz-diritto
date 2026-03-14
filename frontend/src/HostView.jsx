@@ -51,7 +51,7 @@ export default function HostView({ socket, serverUrl }) {
   const timerUrgent = localTimer <= 5;
 
   if (status === 'lobby') {
-    const joinUrl = `${window.location.protocol}//${window.location.hostname}${window.location.port ? ':' + window.location.port : ''}/?player`;
+    const joinUrl = `${window.location.origin}${window.location.pathname}${window.location.pathname.endsWith('/') ? '' : '/'}?player`;
     return (
       <div className="host-lobby">
         <header className="lobby-header">
