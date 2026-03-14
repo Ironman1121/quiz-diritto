@@ -106,6 +106,19 @@ function revealAnswer() {
   emitState();
 }
 
+function shuffleAnswers() {
+  questions.forEach(q => {
+    const correctAnswerText = q.options[q.correctIndex];
+    // Shuffle options using Fisher-Yates
+    for (let i = q.options.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [q.options[i], q.options[j]] = [q.options[j], q.options[i]];
+    }
+    // Update correctIndex to the new position of the correct text
+    q.correctIndex = q.options.indexOf(correctAnswerText);
+  });
+}
+
 io.on('connection', (socket) => {
   console.log('User connected:', socket.id);
   
@@ -179,6 +192,7 @@ io.on('connection', (socket) => {
 
   socket.on('start_game', () => {
     if (socket.id !== gameState.hostId) return;
+    shuffleAnswers(); // Shuffle when game starts
     gameState.currentQuestionIndex = 0;
     gameState.status = 'question';
     for (let id in gameState.players) {
