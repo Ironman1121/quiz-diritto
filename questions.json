@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "text": "Il dovere di diligenza (Art. 2104 c.c.) non impone solo l'impegno generico, ma deve essere valutato in base:",
+    "options": [
+      "Alla sola velocità di esecuzione",
+      "Alla natura della prestazione e all'interesse dell'impresa",
+      "Esclusivamente alla puntualità",
+      "Alle simpatie personali dei colleghi"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 2,
+    "text": "Il limite principale al dovere di obbedienza del lavoratore si riscontra quando l'ordine impartito dal superiore:",
+    "options": [
+      "È troppo faticoso da eseguire",
+      "Contrasta con norme di sicurezza o espone a pericoli non previsti",
+      "Non rientra nelle preferenze del lavoratore",
+      "Viene comunicato tramite email invece che a voce"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 3,
+    "text": "Il 'Dovere di Fedeltà' (Art. 2105 c.c.) vieta al lavoratore di trattare affari per conto proprio o di terzi in concorrenza e di:",
+    "options": [
+      "Fare acquisti presso aziende concorrenti",
+      "Divulgare notizie attinenti all'organizzazione e ai metodi di produzione",
+      "Iscriversi a un sindacato diverso da quello aziendale",
+      "Cambiare residenza senza avvisare"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 4,
+    "text": "Secondo la giurisprudenza, il diritto di critica del lavoratore verso l'azienda sui social network è limitato dal dovere di:",
+    "options": [
+      "Pubblicare solo foto positive dell'ufficio",
+      "Continenza espositiva e verità dei fatti, per non ledere l'immagine aziendale",
+      "Chiedere il permesso per ogni commento pubblico",
+      "Non avere profili social privati"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 5,
+    "text": "In base al D.Lgs. 81/08, il lavoratore è considerato un 'soggetto attivo' della sicurezza. Questo significa che deve:",
+    "options": [
+      "Prendersi cura della propria salute e di quella degli altri, segnalando i pericoli",
+      "Aspettare che il datore di lavoro controlli ogni singola azione",
+      "Acquistare personalmente le scarpe antinfortunistiche",
+      "Sostituire i colleghi assenti nelle mansioni pericolose"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "text": "Nell'ambito del potere disciplinare (Art. 7 Statuto Lavoratori), la contestazione dell'addebito deve essere:",
+    "options": [
+      "Solo verbale e fatta davanti a testimoni",
+      "Specifica, immediata e per iscritto, per consentire il diritto di difesa",
+      "Inviata solo se il lavoratore è recidivo",
+      "Decisa da un voto tra i colleghi"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 7,
+    "text": "Il licenziamento per 'Giusta Causa' avviene quando il lavoratore commette un'infrazione talmente grave da:",
+    "options": [
+      "Impedire la prosecuzione, anche provvisoria, del rapporto (rottura del vincolo fiduciario)",
+      "Causare un ritardo di 10 minuti per tre giorni consecutivi",
+      "Non andare d'accordo con la segretaria",
+      "Rifiutarsi di fare ore di straordinario facoltativo"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 8,
+    "text": "Durante il periodo di malattia, il lavoratore ha il dovere di reperibilità e l'obbligo di:",
+    "options": [
+      "Non uscire mai di casa, nemmeno fuori dalle fasce orarie",
+      "Tenersi informato sulle attività aziendali tramite colleghi",
+      "Non pregiudicare la guarigione con comportamenti imprudenti (es. sport estremi)",
+      "Rispondere sempre al telefono aziendale"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": 9,
+    "text": "Lo 'Ius Variandi' permette al datore di spostare il lavoratore ad altre mansioni, purché siano:",
+    "options": [
+      "Di livello inferiore per ridurre i costi",
+      "Riconducibili allo stesso livello e categoria legale di inquadramento",
+      "Totalmente diverse da quelle per cui è stato assunto",
+      "Scelte a sorte ogni lunedì mattina"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 10,
+    "text": "L'uso degli strumenti aziendali (PC, smartphone) impone un dovere di custodia, ma l'azienda:",
+    "options": [
+      "Può leggere tutte le email private senza preavviso",
+      "Deve informare sulle modalità di controllo e rispettare la privacy (GDPR)",
+      "Può sequestrare lo smartphone personale del dipendente",
+      "Non può porre alcun limite all'uso per scopi personali"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 11,
+    "text": "Il dovere di collaborazione tra colleghi è fondamentale perché il mancato coordinamento può essere sanzionato se:",
+    "options": [
+      "Un collega non saluta al mattino",
+      "Ostacola intenzionalmente il ciclo produttivo o la sicurezza sul lavoro",
+      "Non si partecipa alle cene aziendali",
+      "Si hanno opinioni politiche divergenti"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": 12,
+    "text": "In merito al Whistleblowing, il lavoratore che segnala attività illecite scoperte in azienda:",
+    "options": [
+      "Deve essere licenziato immediatamente per infedeltà",
+      "Gode di tutele legali contro eventuali ritorsioni o discriminazioni",
+      "Deve pagare una penale all'azienda per la fuga di notizie",
+      "Può farlo solo se è un dirigente"
+    ],
+    "correctIndex": 1
+  }
+]
