@@ -7,7 +7,7 @@ import './index.css';
 const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 const SOCKET_SERVER_URL = isLocal
   ? `http://${window.location.hostname}:3001`
-  : window.location.origin;
+  : 'https://quiz-diritto-production.up.railway.app';
 
 // Se la URL contiene ?player entra direttamente come cittadino (usato dal QR code)
 const autoPlayer = new URLSearchParams(window.location.search).has('player');
