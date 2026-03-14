@@ -107,16 +107,27 @@ function revealAnswer() {
 }
 
 function shuffleAnswers() {
-  questions.forEach(q => {
-    const correctAnswerText = q.options[q.correctIndex];
-    // Shuffle options using Fisher-Yates
-    for (let i = q.options.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [q.options[i], q.options[j]] = [q.options[j], q.options[i]];
-    }
-    // Update correctIndex to the new position of the correct text
-    q.correctIndex = q.options.indexOf(correctAnswerText);
-  });
+  console.log('Shuffling answers...');
+  try {
+    questions.forEach((q, idx) => {
+      const correctAnswerText = q.options[q.correctIndex];
+      if (!correctAnswerText) {
+        console.error(`Warning: Question ${idx} has no valid correctAnswerText at index ${q.correctIndex}`);
+        return;
+      }
+      // Shuffle options using Fisher-Yates
+      for (let i = q.options.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [q.options[i], q.options[j]] = [q.options[j], q.options[i]];
+      }
+      // Update correctIndex to the new position of the correct text
+      q.correctIndex = q.options.indexOf(correctAnswerText);
+      console.log(`Question ${idx} shuffled. New correctIndex: ${q.correctIndex}`);
+    });
+    console.log('Shuffling complete.');
+  } catch (err) {
+    console.error('Error during shuffleAnswers:', err);
+  }
 }
 
 io.on('connection', (socket) => {
@@ -191,16 +202,25 @@ io.on('connection', (socket) => {
   });
 
   socket.on('start_game', () => {
-    if (socket.id !== gameState.hostId) return;
-    shuffleAnswers(); // Shuffle when game starts
-    gameState.currentQuestionIndex = 0;
-    gameState.status = 'question';
-    for (let id in gameState.players) {
-        gameState.players[id].currentAnswer = null;
-        gameState.players[id].answeredCorrectly = null;
+    console.log(`Start game request from ${socket.id}. Current host is ${gameState.hostId}`);
+    if (socket.id !== gameState.hostId) {
+      console.warn('Start game rejected: socket is not the host.');
+      return;
     }
-    startTimer();
-    emitState();
+    try {
+      shuffleAnswers(); // Shuffle when game starts
+      gameState.currentQuestionIndex = 0;
+      gameState.status = 'question';
+      for (let id in gameState.players) {
+          gameState.players[id].currentAnswer = null;
+          gameState.players[id].answeredCorrectly = null;
+      }
+      startTimer();
+      emitState();
+      console.log('Game started successfully');
+    } catch (err) {
+      console.error('Error starting game:', err);
+    }
   });
 
   socket.on('next_question', () => {
